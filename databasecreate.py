@@ -1,4 +1,4 @@
-#Databases : 1-product 2-cart 3-invoice / Table :  product_details
+# Databases : 1-product 2-cart 3-invoice / Table :  product_details
 
 import psycopg2
 
