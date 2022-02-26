@@ -1,0 +1,55 @@
+siddh(barcode)-> anupam()->product details(screen) + cart (add)
+
+shopping not end->cart ->barcode + qty ->add 
+shopping -> invoice -> cart(barcode) -> product(product details )
+
+
+
+shopping start flag /siddh ->   anupam fn call  ->  dev new fn  table create + unixtime create -> anupam unixtime  ->siddh unixtime 
+shopping  : 
+
+siddh(barocode ) -> anupam  fn call(barcode)  -> dev fn add return details  -> anupam  -> siddh 
+
+shopping end  :  drop table 
+
+
+from datetime import datetime
+unix_time = int(datetime.now().timestamp())
+
+
+
+3 Databases :
+-----------------
+
+DB -> product :
+Table  -> prouduct_details 
+barcode no  ,  name ,price(per unit), weight 
+
+
+DB -> cart :
+Table name : unixtime/timestamp 
+barcode no , qty 
+
+
+DB -> invoice:
+Table name  : invoice no (increment everytime )
+barcode no , name , price , weight , qty , amount
+
+amount -> total -
+
+
+
+Dev work  : 
+-----------------
+1 - script ->  create  -> 3 database ,table (product) ->setupfn 
+@2 - script -> add,update,delete ->  admin /owner     -> product_details (product table)    
+3 - script -> instant table create cart  -> add,del -> fns 
+4 - script -> instant table create invoice   -> fns [ cart table -> barcode(use) -> product table (fetch)->add invoice table  ]  
+we can  combine 3 & 4
+
+try:
+    a = 1234
+    print (a + " hello world")
+except Exception as error:
+    print ("Oops! An exception has occured:", error)
+    print ("Exception TYPE:", type(error))
