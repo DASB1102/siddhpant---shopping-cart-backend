@@ -40,8 +40,12 @@ print("Successfully connected to product !")
 cursor2 = conn2.cursor()
 
 
-cursor2.execute("CREATE TABLE product_details (BARCODE_NO BIGINT PRIMARY KEY , NAME VARCHAR(30) NOT NULL, PRICE DECIMAL NOT NULL, WEIGHT DECIMAL NOT NULL)")
-print("PRODUCT_DETAILS successfully created!")
+create_query="""CREATE TABLE product_details (BARCODE_NO BIGINT PRIMARY KEY ,
+                NAME VARCHAR(30) NOT NULL, 
+                PRICE_in_rs DECIMAL NOT NULL, 
+                WEIGHT_in_gms DECIMAL NOT NULL)"""
+cursor2.execute(create_query)
+print("product_details successfully created!")
 conn2.commit()
 
 conn2.close()
