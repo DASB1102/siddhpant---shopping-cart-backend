@@ -41,7 +41,7 @@ amount -> total -
 
 Dev work  : 
 -----------------
-1 - script ->  create  -> 3 database ,table (product) ->setupfn 
+@1 - script ->  create  -> 3 database ,table (product) ->setupfn 
 @2 - script -> add,update,delete ->  admin /owner     -> product_details (product table)    
 3 - script -> instant table create cart  -> add,del -> fns 
 4 - script -> instant table create invoice   -> fns [ cart table -> barcode(use) -> product table (fetch)->add invoice table  ]  
